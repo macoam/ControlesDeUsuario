@@ -24,5 +24,10 @@ namespace ControlesDeUsuario
         {
             InitializeComponent();
         }
+
+        private void TxtAltura_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

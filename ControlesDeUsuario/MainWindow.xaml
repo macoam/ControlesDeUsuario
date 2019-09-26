@@ -16,9 +16,9 @@
             <ComboBoxItem>Pentagono</ComboBoxItem>
             <ComboBoxItem>Trapecio</ComboBoxItem>
         </ComboBox>
-        <Button Content="Calcular área" HorizontalAlignment="Left" Margin="197,57,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBlock HorizontalAlignment="Left" Margin="301,55,0,0" TextWrapping="Wrap" Text="0.0" VerticalAlignment="Top" FontSize="16"/>
-        <Grid x:Name="grdParametrosFigura" HorizontalAlignment="Left" Height="100" Margin="38,99,0,0" VerticalAlignment="Top" Width="284"/>
+        <Button x:Name="btnCalcular" Content="Calcular área" HorizontalAlignment="Left" Margin="197,57,0,0" VerticalAlignment="Top" Width="75" Click="BtnCalcular_Click"/>
+        <TextBlock x:Name="lblResultado" HorizontalAlignment="Left" Margin="301,54,0,0" TextWrapping="Wrap" Text="0.0" VerticalAlignment="Top" FontSize="16"/>
+        <Grid x:Name="grdParametrosFigura" HorizontalAlignment="Left" Height="202" Margin="38,99,0,0" VerticalAlignment="Top" Width="284"/>
 
     </Grid>
 </Window>

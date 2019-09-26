@@ -53,5 +53,51 @@ namespace ControlesDeUsuario
                     break;
             }
         }
+
+        private void BtnCalcular_Click(object sender, RoutedEventArgs e)
+        {
+            double area = 0.0;
+
+            switch (comboxTitulo.SelectedIndex)
+            {
+                case 0: //Circulo
+                    double radio = double.Parse(((ParametrosCirculo)(grdParametrosFigura.Children[0])).txtRadio.Text);
+                    area = Math.PI * radio * radio;
+                    break;
+
+                case 1: //Triangulo
+                    double altura2 = double.Parse(((ParametrosTriangulo)(grdParametrosFigura.Children[0])).txtAlturaTri.Text);
+                    double base2 = double.Parse(((ParametrosTriangulo)(grdParametrosFigura.Children[0])).txtBaseTri.Text);
+                    area = ((base2 * altura2) / 2);
+                    break;
+                case 2: //Rectangulo
+                    double altura3 = double.Parse(((ParametrosRectangulo)(grdParametrosFigura.Children[0])).txtAlturaRec.Text);
+                    double base3 = double.Parse(((ParametrosRectangulo)(grdParametrosFigura.Children[0])).txtBaseRec.Text);
+                    area = ((base3 * altura3) / 2);
+                    break;
+                case 3: //Cuadrado
+                    double lado1 = double.Parse(((ParametrosCuadrado)(grdParametrosFigura.Children[0])).txtLado1.Text);
+                    double lado2 = double.Parse(((ParametrosCuadrado)(grdParametrosFigura.Children[0])).txtLado2.Text);
+                    area = lado1 * lado2;
+                    break;
+                case 4: //Pentagono
+                    double perimetro = double.Parse(((ParametrosPentagono)(grdParametrosFigura.Children[0])).txtPerimetro.Text);
+                    double apotema = double.Parse(((ParametrosPentagono)(grdParametrosFigura.Children[0])).txtApotema.Text);
+                    area = perimetro * apotema;
+                    break;
+                case 5: //Trapecio
+                    double basemayor = double.Parse(((ParametrosTrapecio)(grdParametrosFigura.Children[0])).txtBaseMayor.Text);
+                    double basemenor = double.Parse(((ParametrosTrapecio)(grdParametrosFigura.Children[0])).txtBaseMenor.Text);
+                    double altura4 = double.Parse(((ParametrosTrapecio)(grdParametrosFigura.Children[0])).txtAlturaTra.Text);
+                    area = altura4 * ((basemayor + basemenor) / 2);
+                    break;
+                default:
+                    break;
+            }
+
+
+            lblResultado.Text = area.ToString();
+
+        }
     }
 }
